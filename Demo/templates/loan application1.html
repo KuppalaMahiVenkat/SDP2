@@ -1,0 +1,53 @@
+{% load static %}
+<html>
+<body>
+<link rel="stylesheet" href="{% static 'mobile recharge.css' %}">
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/banking">Banking</a>
+            <a href="/logout" class="right">Logout</a>
+        </div>
+
+
+<script>
+
+function computeLoan(){
+   var loan = document.getElementById('loan').value;
+   var interest_rate = document.getElementById('interest_rate').value;
+   var months = document.getElementById('months').value;
+   var interest = (loan * (interest_rate * .01)) / months;
+   var payment =  ((loan / months) + interest).toFixed(2);
+   payment = payment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+   document.getElementById('payment').innerHTML = "Monthly Payment= N"+payment;
+}
+</script>
+<link href="{% static 'loan application1.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+
+<form action="/loan1" method="POST">
+     {% csrf_token %}
+    <h1><strong>WORKERS LOAN/SALARY SCALE MACHINE</strong></h1>
+        <br>Amount loaned:</br>
+       <input type="text" id="loan" name="amt"  placeholder="Amount" >
+        <br>Interest Rate (%):</br>
+        <input type="text" id="interest_rate" name="ir" placeholder="" value="10" step=".1" >
+        <br>Months:</br>
+       	<input type="text" id="months" name="months"  value="1" step="1" onchange="computeLoan()">
+
+      <h2 id="payment"></h2>
+
+<input type="submit" value="Submit" class="btn">
+<marquee>
+   <strong>
+        Hi...Get Your loan, Utilize it well, and pay back with little interest... 
+   </strong>
+</marquee>
+
+   <div>
+   Powered by MSM Banking System
+   </div>
+
+</form>
+</body>
+</html>

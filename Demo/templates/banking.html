@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+    <head>
+        <title>Technical Events</title>
+        <link rel="stylesheet" href="{% static 'banking.css' %}">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body bgcolor="#ffffff">
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/service">Services</a>
+            <a href="/logout" class="right">Logout</a>
+        </div>
+        <div class="container">
+        <div class="card">
+            <img src="{% static 'Online banking1.jpg' %}" alt="Denim Jeans" style="width:100%">
+            <h1>Online Banking</h1>
+            <p>To access Online Banking services </p>
+            <a href="/personalbanking"><button >Click Here</button></a>
+          </div>
+          <div class="midcard">
+            <img src="{% static 'mobile banking.jpg' %}" alt="Denim Jeans" style="width:100%">
+            <h1>Mobile Banking</h1>
+            <p>To access Online Banking services </p>
+            <a href="/mobilebanking"><button >Click Here</button></a>
+          </div>
+          
+        </div>
+    </body>
+</html>

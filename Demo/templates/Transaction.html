@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+<head>
+        <title>PAYMENT</title>
+        <link rel="stylesheet" href="{% static 'payment.css'%}">
+    </head>
+<body>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/service">Service</a>
+            <a href="/banking">Banking</a>
+            <a href="/logout">logout</a>
+        </div>
+            
+
+<h3>Payment</h3>
+
+<div>
+  <form action="/view1" method ="POST">
+  {% csrf_token %}
+    <input type="submit" value="Show Transactions">
+  </form>
+</div>
+
+</body>
+</html>

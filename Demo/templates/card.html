@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+    <head>
+        <title>Technical Events</title>
+        <link rel="stylesheet" href="{% static 'cards.css'%}">
+    </head>
+    <body>
+      <body style="background-color:#ffffff;"></body>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/aboutus">OurTeam</a>
+            <a href="/logout" class="right">Logout</a>
+        </div>
+        <div class="container">
+        <div class="card">
+            <img src="{% static 'banking1.jpg' %}" alt="Denim Jeans" style="width:100%">
+            <h1>Banking</h1>
+            <p>To Access Banking Services</p>
+            <a href="/banking"><button >Click Here</button></a>
+          </div>
+
+
+
+          <div class="midcard">
+            <img src="{% static 'finance.jpg' %}" alt="Denim Jeans" style="width:100%">
+            <h1>Finance</h1>
+            <p>To Access Financial Services</p>
+            <a href="/finance"><button >Click Here</button></a>
+          </div>
+
+        </div>
+    </body>
+</html>

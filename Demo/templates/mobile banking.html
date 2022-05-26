@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+<body>
+<link rel="stylesheet" href="{% static 'mobile banking.css' %}">
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/service">Services</a>
+            <a href="/banking">Banking</a>
+            <a href="/personalbanking">Personal Banking</a>
+            <a href="/logout" class="right">Logout</a>
+        </div>
+
+    
+    
+        <div class="container">
+        <div class="card">
+            <img src="{% static 'mobile recharge1.jpg' %}" alt="Denim Jeans" style="width:100%">
+            <h1>Mobile Recharge</h1>
+            <p>To access Mobile Recharge services </p>
+            <a href="/mobilerecharge"><button >Click Here</button></a>
+          </div>
+          <div class="midcard">
+            <img src="{% static 'current bill.jpg' %}" alt="Denim Jeans" style="width:100%">
+            <h1>Current Bill</h1>
+            <p>To pay Current Bill.</p>
+            <a href="/electricitybill"><button >Click Here</button></a>
+          </div>
+          
+        </div>
+    </body>
+</html>
